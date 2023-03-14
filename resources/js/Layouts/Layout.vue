@@ -104,7 +104,7 @@ const flashSuccess = computed(() => usePage().props.flash.success)
 
     </header>
 
-    <div class="mt-[59px]">
+    <div class="mt-12 md:mt-[59px]">
       <div v-if="flashSuccess">
         {{ flashSuccess }}
       </div>
