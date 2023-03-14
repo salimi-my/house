@@ -30,9 +30,8 @@ const flashSuccess = computed(() => usePage().props.flash.success)
       <nav class="bg-white px-2 sm:px-4 py-1 fixed w-full z-20 top-0 left-0 dark:bg-gray-900 drop-shadow-md">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="https://flowbite.com/" class="flex items-center">
-            <i class="fa-solid fa-house text-blue-600 fa-xl mr-3"></i>
-            <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" /> -->
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">House</span>
+            <img src="/assets/images/house-logo.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+            <span class="self-center text-xl font-bold whitespace-nowrap text-blue-700 dark:text-gray-400">House</span>
           </a>
           <div class="flex md:order-2">
             <button @click="toggleDark()" id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button"
