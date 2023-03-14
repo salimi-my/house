@@ -27,7 +27,7 @@ const flashSuccess = computed(() => usePage().props.flash.success)
   </Head>
   <main>
     <header>
-      <nav class="bg-white border-gray-200 px-2 sm:px-4 py-1 fixed w-full z-20 top-0 left-0 border-b dark:bg-gray-900">
+      <nav class="bg-white px-2 sm:px-4 py-1 fixed w-full z-20 top-0 left-0 dark:bg-gray-900 drop-shadow-md">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="https://flowbite.com/" class="flex items-center">
             <i class="fa-solid fa-house text-blue-600 fa-xl mr-3"></i>
