@@ -36,10 +36,9 @@ import Rent from './SVG/Rent.vue';
       <div class="lg:col-span-2 relative">
         <h2 class="mb-2 text-3xl font-medium text-gray-700 dark:text-white text-center lg:text-left">Take the first step
         </h2>
-        <p class="text-lg text-gray-700 dark:text-white mb-8 text-center lg:text-left">Search for house or list
-          your
-          house
-          on our platform.</p>
+        <p class="text-lg text-gray-700 dark:text-white mb-8 text-center lg:text-left">
+          Search for house or list your house on our platform.
+        </p>
         <img src="/assets/images/home.svg" class="absolute w-full top-64 lg:top-24 inset-x-0 h-32" />
       </div>
       <div class="lg:col-span-3 grid grid-cols-3 gap-3 md:gap-10 lg:gap-5 dark:text-white mb-36 md:mb-44 lg:mb-0">
