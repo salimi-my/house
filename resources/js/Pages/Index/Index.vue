@@ -60,4 +60,56 @@ import Rent from './SVG/Rent.vue';
       </div>
     </div>
   </div>
+
+  <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-4 mx-auto mt-20">
+    <div>
+      <h3 class="text-gray-800 text-3xl font-semibold mb-4 dark:text-white">We'll see you home</h3>
+      <div class="flex items-center bg-blue-700 dark:bg-blue-800 p-8 rounded-lg">
+        <div>
+          <h3 class="text-2xl font-semibold text-white mb-5">We have houses listing on all states in Malaysia!</h3>
+          <button type="button"
+            class="text-blue-700 bg-white hover:opacity-80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
+            Let's Go!
+          </button>
+        </div>
+        <img src="/assets/images/malaysia-map.svg" class="w-40" />
+      </div>
+      <div class="grid grid-cols-2 mt-4 gap-4">
+        <div class="bg-gray-400 dark:bg-gray-800 rounded-lg p-7">
+          <h3 class="text-white text-3xl font-medium">We have property guides to help you</h3>
+          <button type="button"
+            class="text-white mt-6 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read Them
+          </button>
+        </div>
+        <div class="bg-blue-200 dark:bg-blue-300 rounded-lg p-7">
+          <h3 class="text-gray-700 text-3xl font-medium">View the latest home pricing trends</h3>
+          <button type="button"
+            class="text-white mt-6 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Check it Out
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="w-full relative">
+      <h3 class="text-gray-800 text-3xl font-semibold mb-4 dark:text-white">Begin your home journey</h3>
+      <img src="/assets/images/home-couch.jpg" class="h-[68.5%] w-full rounded-lg brightness-50 object-cover" />
+      <div class="absolute top-20 left-10">
+        <h3 class="text-white text-4xl font-semibold">Let us guide you to<br />your new home</h3>
+        <button type="button"
+          class="text-white mt-8 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Get Started
+        </button>
+      </div>
+      <div class="absolute top-96 left-10">
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="/assets/images/house-logo.png" class="h-20 mr-3" alt="Flowbite Logo" />
+          <div>
+            <h3 class="self-center text-3xl font-bold whitespace-nowrap text-white">House</h3>
+            <h3 class="text-white text-xl font-medium">We'll see you home</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </template>
