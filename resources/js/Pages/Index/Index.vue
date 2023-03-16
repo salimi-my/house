@@ -6,7 +6,7 @@ import Rent from './SVG/Rent.vue';
 </script>
 
 <template>
-  <div class="w-full bg-[url('/assets/images/house-banner.jpg')] bg-center bg-cover flex justify-center">
+  <section class="w-full bg-[url('/assets/images/house-banner.jpg')] bg-center bg-cover flex justify-center">
     <div class="container h-[35rem] flex justify-center items-center">
       <form class="w-96 md:w-[40rem]">
         <h1 class="text-4xl text-white font-bold text-center mb-4 drop-shadow-lg">Find your next house</h1>
@@ -27,10 +27,10 @@ import Rent from './SVG/Rent.vue';
         </div>
       </form>
     </div>
-  </div>
+  </section>
 
 
-  <div
+  <section
     class="max-w-5xl p-4 py-10 bg-white border border-gray-200 rounded-lg shadow lg:py-14 sm:px-24 dark:bg-gray-800 dark:border-gray-700 mx-4 xl:mx-auto -mt-12">
     <div class="grid lg:grid-cols-5 lg:gap-10">
       <div class="lg:col-span-2 relative">
@@ -59,7 +59,7 @@ import Rent from './SVG/Rent.vue';
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="max-w-6xl grid lg:grid-cols-2 gap-4 mx-4 xl:mx-auto mt-20">
     <div>
