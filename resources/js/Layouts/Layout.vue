@@ -23,7 +23,7 @@ const flashSuccess = computed(() => usePage().props.flash.success)
 <template>
   <Head>
     <title>{{ props.title }}</title>
-    <meta name="description" :content="props.description">
+    <meta name="description" :content="props.description" />
   </Head>
   <main>
     <header>
