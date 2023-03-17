@@ -113,11 +113,10 @@ import Rent from './SVG/Rent.vue';
     </div>
   </section>
 
-  <section class="w-full bg-gray-100 dark:bg-gray-700 -mt-16">
+  <section class="w-full bg-gray-100 dark:bg-gray-700 -mt-16 md:-mt-40 lg:mt-20 xl:-mt-16">
     <div class="max-w-6xl grid lg:grid-cols-3 gap-4 mx-4 xl:mx-auto py-16">
-
       <div
-        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
+        class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
         <a href="#">
           <img class="rounded-t-lg" src="/assets/images/buy-home.png" alt="" />
         </a>
@@ -144,7 +143,7 @@ import Rent from './SVG/Rent.vue';
         </div>
       </div>
       <div
-        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
+        class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
         <a href="#">
           <img class="rounded-t-lg" src="/assets/images/sell-home.png" alt="" />
         </a>
@@ -170,7 +169,7 @@ import Rent from './SVG/Rent.vue';
         </div>
       </div>
       <div
-        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
+        class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
         <a href="#">
           <img class="rounded-t-lg" src="/assets/images/rent-home.png" alt="" />
         </a>
@@ -196,7 +195,6 @@ import Rent from './SVG/Rent.vue';
           </button>
         </div>
       </div>
-
     </div>
   </section>
 </template>
