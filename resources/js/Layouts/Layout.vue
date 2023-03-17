@@ -18,6 +18,9 @@ const props = defineProps({
 })
 
 const flashSuccess = computed(() => usePage().props.flash.success)
+
+const d = new Date();
+let year = d.getFullYear();
 </script>
 
 <template>
@@ -102,7 +105,6 @@ const flashSuccess = computed(() => usePage().props.flash.success)
           </div>
         </div>
       </nav>
-
     </header>
 
     <div class="mt-12 md:mt-[59px] flex flex-col justify-center items-center">
@@ -112,11 +114,10 @@ const flashSuccess = computed(() => usePage().props.flash.success)
       <slot />
     </div>
 
-
     <footer class="bg-gray-100 dark:bg-gray-700 mt-20">
       <div class="mx-auto w-full container py-16 px-4 sm:px-6">
         <div class="md:flex md:justify-between">
-          <div class="grid gap-12 xl:grid-cols-6 xl:gap-24">
+          <div class="grid gap-12 lg:grid-cols-6 lg:gap-8 xl:gap-24">
             <div class="col-span-2">
               <a href="https://flowbite.com/" class="flex mb-5">
                 <img src="/assets/images/house-logo.png" class="h-8 mr-3" alt="House Logo">
@@ -124,8 +125,8 @@ const flashSuccess = computed(() => usePage().props.flash.success)
               </a>
               <p class="max-w-lg mb-3 text-gray-600 dark:text-gray-400">
                 House is the best place to search, whether you are
-                selling, or buying your own home. You can find thousands
-                of properties for sale and rent with detailed info about each property, including maps and photos.
+                selling, or buying your own home. Find houses for sale with detailed info about each property, including
+                maps and photos.
               </p>
             </div>
             <div>
@@ -206,8 +207,10 @@ const flashSuccess = computed(() => usePage().props.flash.success)
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-600 lg:my-8" />
         <div class="flex flex-col items-center justify-center">
-          <p class="font-medium text-gray-600 dark:text-gray-400">
-            House © 2023. Created by Salimi. All Rights Reserved
+          <p class="font-normal text-gray-600 dark:text-gray-400">
+            House © {{ year }}. Created by <a href="https://www.salimi.my" target="_blank"
+              class="hover:underline">Salimi</a>.
+            All Rights Reserved
           </p>
           <div class="flex mt-4 gap-4 sm:justify-center">
             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
