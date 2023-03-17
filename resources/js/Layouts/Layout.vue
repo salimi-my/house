@@ -33,8 +33,8 @@ let year = d.getFullYear();
       <nav
         class="bg-white px-2 sm:px-4 py-2 md:py-1 fixed w-full z-20 top-0 left-0 dark:bg-gray-800 drop-shadow-md border-b dark:border-gray-700">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="https://flowbite.com/" class="flex items-center">
-            <img src="/assets/images/house-logo.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+          <a href="#" class="flex items-center">
+            <img src="/assets/images/house-logo.png" class="h-6 mr-3 sm:h-9" alt="House Logo" />
             <span class="self-center text-xl font-bold whitespace-nowrap text-blue-700 dark:text-gray-400">House</span>
           </a>
           <div class="flex md:order-2">
@@ -119,7 +119,7 @@ let year = d.getFullYear();
         <div class="md:flex md:justify-between">
           <div class="grid gap-12 lg:grid-cols-6 lg:gap-8 xl:gap-24">
             <div class="col-span-2">
-              <a href="https://flowbite.com/" class="flex mb-5">
+              <a href="#" class="flex mb-5">
                 <img src="/assets/images/house-logo.png" class="h-8 mr-3" alt="House Logo">
                 <span class="self-center text-xl font-bold whitespace-nowrap text-blue-700 dark:text-white">House</span>
               </a>
