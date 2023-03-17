@@ -216,4 +216,44 @@ import Rent from './SVG/Rent.vue';
       </div>
     </div>
   </section>
+
+  <section class="w-full">
+    <div class="max-w-6xl mx-4 xl:mx-auto mt-20">
+      <div class="grid md:grid-cols-8 items-center mb-2">
+        <h3 class="md:col-span-7 mb-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          Explore Residential Areas in Malaysia
+        </h3>
+        <a href="#"
+          class="md:col-span-1 text-blue-700 hover:opacity-80 flex md:justify-end items-center gap-1 font-medium">
+          More
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="bg-gray-100 dark:bg-gray-700 rounded-lg grid grid-cols-4 py-5 px-6">
+        <div class="flex flex-col">
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Kuala Lumpur</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Kedah</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Pahang</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Sabah</a>
+        </div>
+        <div class="flex flex-col">
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Selangor</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Kelantan</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Perak</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Sarawak</a>
+        </div>
+        <div class="flex flex-col">
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Penang</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Melaka</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Perlis</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Terengganu</a>
+        </div>
+        <div class="flex flex-col">
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Johor</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Negeri Sembilan</a>
+          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Putrajaya</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
