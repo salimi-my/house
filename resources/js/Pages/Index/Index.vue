@@ -122,9 +122,9 @@ import Rent from './SVG/Rent.vue';
         </a>
         <div class="p-5 px-8">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Buy a home
-            </h5>
+            </h3>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             Find your place with an immersive photo experience and the most listings, including things you won't find
@@ -149,9 +149,9 @@ import Rent from './SVG/Rent.vue';
         </a>
         <div class="p-5 px-8">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Sell a home
-            </h5>
+            </h3>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             No matter what path you take to sell your home, we can help you navigate a successful sale.
@@ -175,9 +175,9 @@ import Rent from './SVG/Rent.vue';
         </a>
         <div class="p-5 px-8">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Rent a home
-            </h5>
+            </h3>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             We're creating a seamless online experience - from shopping on the largest rental network, to applying, to
@@ -194,6 +194,25 @@ import Rent from './SVG/Rent.vue';
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl grid lg:grid-cols-2 gap-4 mx-4 xl:mx-auto mt-20">
+    <img src="/assets/images/for-sale.png" class="w-full object-cover" />
+    <div class="flex flex-col self-center p-8 items-center lg:items-start">
+      <h3 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+        See neighborhoods
+      </h3>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center lg:text-left">
+        With more neighborhood insights than any other real estate website, we've captured the color and diversity of
+        communities.
+      </p>
+      <div>
+        <button type="button"
+          class="text-white mt-6 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Check it Out
+        </button>
       </div>
     </div>
   </section>
