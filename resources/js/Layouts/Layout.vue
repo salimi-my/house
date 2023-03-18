@@ -28,10 +28,10 @@ let year = d.getFullYear();
     <title>{{ props.title }}</title>
     <meta name="description" :content="props.description" />
   </Head>
-  <main>
-    <header>
+  <main class="relative">
+    <header class="sticky top-0 z-10">
       <nav
-        class="bg-white px-2 sm:px-4 py-2 md:py-1 fixed w-full z-20 top-0 left-0 dark:bg-gray-800 drop-shadow-md border-b dark:border-gray-700">
+        class="bg-white px-2 sm:px-4 py-2 md:py-1 w-full dark:bg-gray-800 drop-shadow-md border-b dark:border-gray-700">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#" class="flex items-center">
             <img src="/assets/images/house-logo.png" class="h-6 mr-3 sm:h-9" alt="House Logo" />
@@ -107,7 +107,7 @@ let year = d.getFullYear();
       </nav>
     </header>
 
-    <div class="mt-12 md:mt-[59px] flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center">
       <div v-if="flashSuccess">
         {{ flashSuccess }}
       </div>
