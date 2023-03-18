@@ -1,5 +1,5 @@
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import Card from '../../Components/Card.vue';
 
 defineProps({
   listings: Array
@@ -7,17 +7,7 @@ defineProps({
 </script>
 
 <template>
-  <div v-for="listing in listings" :key="listing.id">
-    <div>
-      <Link :href="`/listing/${listing.id}`">
-      {{ listing.address }}, {{ listing.zip_code }} {{ listing.city }}, {{ listing.state }} for MYR{{ listing.price }}
-      </Link>
-    </div>
-    <div>
-      <Link :href="`/listing/${listing.id}/edit`">Edit</Link>
-    </div>
-    <div>
-      <Link :href="`/listing/${listing.id}`" method="delete" as="button">Delete</Link>
-    </div>
+  <div class="container max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-16 mt-20 px-4 xl:px-0">
+    <Card v-for="listing in listings" :listing="listing" :key="listing.id" />
   </div>
 </template>
