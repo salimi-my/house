@@ -11,7 +11,7 @@ defineProps({
 <template>
   <Link :href="`/listing/${listing.id}`"
     class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg hover:scale-[1.01] transition ease-in-out duration-100 relative w-full">
-  <Carousel :height="'h-[250px]'" />
+  <Carousel />
   <div class="p-5">
     <Price :price="listing.price" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" />
     <span

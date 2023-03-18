@@ -13,8 +13,7 @@ defineProps({
 <template>
   <Swiper :modules="[Navigation, Pagination]" :pagination="true" :loop="true" navigation>
     <SwiperSlide v-for="n in 5" :key="n">
-      <img class="rounded-t-lg w-full object-cover" :class="height" :src="'/assets/images/property-' + n + '.webp'"
-        alt="" />
+      <img class="rounded-t-lg w-full h-[250px] object-cover" :src="'/assets/images/property-' + n + '.webp'" alt="" />
     </SwiperSlide>
   </Swiper>
 </template>
