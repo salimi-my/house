@@ -1,4 +1,5 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 import CarouselGallery from '../../Components/CarouselGallery.vue'
 import Price from '../../Components/Price.vue'
@@ -15,7 +16,14 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
 </script>
 
 <template>
-  <div class="container max-w-6xl grid lg:grid-cols-5 mt-20 px-4 xl:px-0 big-carousel gap-8">
+  <div class="container max-w-6xl mt-16 px-4 xl:px-0">
+    <Link href="/listing"
+      class="inline-flex items-center py-1 px-3 font-medium text-gray-500 dark:text-white bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-700 hover:text-white dark:hover:bg-blue-700 dark:hover:text-white">
+    <i class="fa-solid fa-arrow-left mr-2"></i> Back to Listing
+    </Link>
+  </div>
+
+  <div class="container max-w-6xl grid lg:grid-cols-5 mt-3 px-4 xl:px-0 big-carousel gap-4">
 
     <div
       class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:col-span-3">
