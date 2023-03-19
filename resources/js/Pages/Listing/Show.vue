@@ -11,7 +11,7 @@ const props = defineProps({
 const interestRate = ref(2.5)
 const duration = ref(25)
 
-const { monthlyPayment } = useMonthlyPayment(props.listing.price, interestRate, duration)
+const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props.listing.price, interestRate, duration)
 </script>
 
 <template>
@@ -64,8 +64,28 @@ const { monthlyPayment } = useMonthlyPayment(props.listing.price, interestRate, 
           <input v-model.number="duration" type="range" min="3" max="35" step="1"
             class="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
           <div class="text-gray-900 dark:text-white mt-2">
-            <p>Your monthly payment</p>
+            <p>Your Monthly Payment</p>
             <Price :price="monthlyPayment" class="text-2xl font-bold tracking-tight" />
+          </div>
+          <div class="mt-4 text-gray-900 dark:text-white">
+            <div class="flex justify-between">
+              <div>Total Paid</div>
+              <div>
+                <Price :price="totalPaid" class="font-bold" />
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div>Principle Paid</div>
+              <div>
+                <Price :price="listing.price" class="font-bold" />
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div>Interest Paid</div>
+              <div>
+                <Price :price="totalInterestPaid" class="font-bold" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
