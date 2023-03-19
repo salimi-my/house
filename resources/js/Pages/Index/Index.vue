@@ -257,7 +257,7 @@ import Rent from './SVG/Rent.vue';
     </div>
   </section>
 
-  <section class="w-full mt-16">
+  <section class="w-full mt-16 mb-20">
     <h3 class="md:col-span-7 mb-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white text-center">
       Search for next home now!
     </h3>

@@ -23,7 +23,7 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
     </Link>
   </div>
 
-  <div class="container max-w-6xl grid lg:grid-cols-5 mt-2 px-4 xl:px-0 big-carousel gap-4">
+  <div class="container max-w-6xl grid lg:grid-cols-5 mt-2 mb-20 px-4 xl:px-0 big-carousel gap-4">
 
     <div
       class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:col-span-3">

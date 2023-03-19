@@ -39,7 +39,7 @@ let year = d.getFullYear();
           </Link>
           <div class="flex md:order-2">
             <button @click="toggleDark()" id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button"
-              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-3">
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
               <svg v-if="!isDark" aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -60,12 +60,13 @@ let year = d.getFullYear();
               <div class="tooltip-arrow" data-popper-arrow=""
                 style="position: absolute; left: 0px; transform: translate(69px, 0px);"></div>
             </div>
-            <button type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Sign In
-            </button>
+            <Link href="/login"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-0 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <span class="mr-2">Sign in</span>
+            <i class="fa-solid fa-right-to-bracket"></i>
+            </Link>
             <button data-collapse-toggle="navbar-cta" type="button"
-              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-1"
               aria-controls="navbar-cta" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -114,7 +115,7 @@ let year = d.getFullYear();
       <slot />
     </div>
 
-    <footer class="bg-gray-100 dark:bg-gray-700 mt-20">
+    <footer class="bg-gray-100 dark:bg-gray-700">
       <div class="mx-auto w-full container py-16 px-4 sm:px-6">
         <div class="md:flex md:justify-between">
           <div class="grid gap-12 lg:grid-cols-6 lg:gap-8 xl:gap-24">
