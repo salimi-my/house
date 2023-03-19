@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .min-height-screen {
+    @apply md:min-h-[calc(100vh_-_862px)] lg:min-h-[calc(100vh_-_502px)] xl:min-h-[calc(100vh_-_482px)];
+  }
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   opacity: 0.8;
