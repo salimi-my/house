@@ -34,7 +34,7 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
         </div>
         <div class="mb-4 flex flex-col">
           <div class="mb-1 flex space-x-2 items-center">
-            <i class="fa-solid fa-location-dot text-blue-700"></i>
+            <i class="fa-solid fa-map-location-dot text-blue-700"></i>
             <p class="font-semibold text-gray-700 dark:text-white">
               Address
             </p>
