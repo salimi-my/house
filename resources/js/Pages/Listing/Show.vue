@@ -18,12 +18,12 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
 <template>
   <div class="container max-w-6xl mt-16 px-4 xl:px-0">
     <Link href="/listing"
-      class="inline-flex items-center py-1 px-3 font-medium text-gray-500 dark:text-white bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-700 hover:text-white dark:hover:bg-blue-700 dark:hover:text-white">
-    <i class="fa-solid fa-arrow-left mr-2"></i> Back to Listing
+      class="text-md font-bold tracking-tight text-gray-500 dark:text-white hover:text-blue-700 dark:hover:text-blue-700">
+    <i class="fa-solid fa-arrow-left mr-1"></i> Back to Listing
     </Link>
   </div>
 
-  <div class="container max-w-6xl grid lg:grid-cols-5 mt-3 px-4 xl:px-0 big-carousel gap-4">
+  <div class="container max-w-6xl grid lg:grid-cols-5 mt-2 px-4 xl:px-0 big-carousel gap-4">
 
     <div
       class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:col-span-3">
