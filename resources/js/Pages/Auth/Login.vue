@@ -1,5 +1,11 @@
 <script setup>
 import { Link, useForm } from '@inertiajs/vue3'
+import { onMounted } from 'vue'
+import { initDismisses } from 'flowbite'
+
+onMounted(() => {
+  initDismisses()
+})
 
 const form = useForm({
   email: null,
@@ -7,7 +13,10 @@ const form = useForm({
   remember: false
 })
 
-const login = () => form.post('/login')
+const login = () => {
+  form.clearErrors()
+  form.post('/login')
+}
 </script>
 
 <template>
@@ -24,19 +33,37 @@ const login = () => form.post('/login')
             Sign in to your account
           </h1>
           <form @submit.prevent="login" class="space-y-4 md:space-y-6">
+            <div id="login-error"
+              class="flex p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 items-center"
+              :class="{ hidden: !form.errors.auth }" role="alert">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span class="sr-only">Info</span>
+              <div class="ml-3 text-sm font-medium">
+                {{ form.errors.auth }}
+              </div>
+              <button type="button"
+                class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex justify-center items-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"
+                data-dismiss-target="#login-error" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
             <div>
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
               <input v-model="form.email" type="email" name="email" id="email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="name@domain.com" required />
-              <p class="mt-0 text-sm text-red-600 dark:text-red-500 -mb-5">Potential error!</p>
+                placeholder="name@domain.com" />
+              <p v-if="form.errors.email" class="mt-0 text-sm text-red-600 dark:text-red-500 -mb-5">
+                {{ form.errors.email }}
+              </p>
             </div>
             <div>
               <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
               <input v-model="form.password" type="password" name="password" id="password" placeholder="••••••••"
-                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required />
-              <p class="mt-0 text-sm text-red-600 dark:text-red-500 -mb-5">Potential error!</p>
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+              <p v-if="form.errors.password" class="mt-0 text-sm text-red-600 dark:text-red-500 -mb-5">
+                {{ form.errors.password }}
+              </p>
             </div>
             <div class="flex items-center justify-between">
               <div class="flex items-start">

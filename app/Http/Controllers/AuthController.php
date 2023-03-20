@@ -23,13 +23,13 @@ class AuthController extends Controller
             'password' => 'required|string'
         ]), $request->remember)) {
             throw ValidationException::withMessages([
-                'email' => 'Your email or password were incorrect.'
+                'auth' => 'Your email or password were incorrect.'
             ]);
         }
 
         $request->session()->regenerate();
 
-        return redirect()->intended();
+        return redirect()->intended('listing');
     }
 
     public function destroy()
