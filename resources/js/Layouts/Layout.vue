@@ -1,6 +1,6 @@
 <script setup>
 import { Head, Link, usePage } from '@inertiajs/vue3'
-import { computed, onMounted, watch } from 'vue'
+import { computed, onMounted } from 'vue'
 import { initCollapses, initTooltips } from 'flowbite'
 import { useDark, useToggle } from '@vueuse/core'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
@@ -18,12 +18,7 @@ const props = defineProps({
   description: String
 })
 
-const flashSuccess = computed(() => usePage().props.flash.success)
 const user = computed(() => usePage().props.user)
-
-watch(user, () => {
-  //
-})
 
 const d = new Date();
 let year = d.getFullYear();
@@ -170,9 +165,6 @@ let year = d.getFullYear();
     </header>
 
     <div class="flex flex-col justify-center items-center">
-      <div v-if="flashSuccess">
-        {{ flashSuccess }}
-      </div>
       <slot />
     </div>
 
