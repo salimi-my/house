@@ -69,21 +69,25 @@ const login = () => {
               <div class="flex items-start">
                 <div class="flex items-center h-5">
                   <input v-model="form.remember" id="remember" name="remember" aria-describedby="remember" type="checkbox"
-                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" />
+                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 cursor-pointer" />
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="remember" class="text-gray-500 dark:text-gray-300 cursor-pointer">Remember me</label>
+                  <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
                 </div>
               </div>
-              <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot
-                password?</a>
+              <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">
+                Forgot password?
+              </a>
             </div>
             <button type="submit"
-              class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
-              in</button>
+              class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+              Sign in
+            </button>
             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-              Don't have an account yet? <a href="#"
-                class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+              Don't have an account yet?
+              <Link href="/register" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+              Sign up
+              </Link>
             </p>
           </form>
         </div>
