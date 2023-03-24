@@ -25,7 +25,10 @@ class User extends Authenticatable
         'email',
         'phone',
         'password',
+        'avatar'
     ];
+
+    protected $appends = ['src'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -55,5 +58,10 @@ class User extends Authenticatable
             get: fn ($value) => $value,
             set: fn ($value) => Hash::make($value),
         );
+    }
+
+    public function getSrcAttribute()
+    {
+        return asset("storage/{$this->avatar}");
     }
 }

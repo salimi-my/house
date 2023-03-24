@@ -67,7 +67,8 @@ let year = d.getFullYear();
                 <MenuButton
                   class="flex items-center text-sm font-medium p-1 text-gray-700 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-500 md:mr-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white">
                   <span class="sr-only">Open user menu</span>
-                  <img class="w-8 h-8 mr-2 rounded-full object-cover" src="/assets/images/avatar.svg" alt="user photo">
+                  <img class="w-8 h-8 mr-2 rounded-full object-cover"
+                    :src="user?.avatar ? user?.avatar : '/assets/images/avatar.svg'" alt="user photo">
                   <span class="w-0 lg:w-full truncate lg:mr-2">{{ user?.name }}</span>
                   <i class="fa-solid fa-caret-down"></i>
                 </MenuButton>
@@ -85,12 +86,12 @@ let year = d.getFullYear();
                   </div>
                   <div class="px-1 py-1">
                     <MenuItem v-slot="{ active }">
-                    <button :class="[
+                    <Link href="/user-account/profile" :class="[
                       active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
                       'group flex w-full items-center rounded-md px-4 py-2 text-sm',
                     ]">
-                      Dashboard
-                    </button>
+                    Profile
+                    </Link>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
                     <button :class="[

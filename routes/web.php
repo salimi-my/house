@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\UserController;
@@ -28,3 +29,8 @@ Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
 
 Route::get('register', [UserController::class, 'create'])->name('user');
 Route::post('user', [UserController::class, 'store'])->name('user.store');
+
+Route::prefix('user-account')->name('user-account.')->middleware('auth')->group(function () {
+  Route::get('profile', [ProfileController::class, 'edit'])->name('profile');
+  Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
+});

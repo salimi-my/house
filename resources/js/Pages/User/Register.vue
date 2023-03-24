@@ -36,7 +36,7 @@ const flashSuccess = computed(() => usePage().props.flash.success)
           <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
             Create an account
           </h1>
-          <div id="login-error"
+          <div id="success-alert"
             class="flex p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 items-center"
             :class="{ hidden: !flashSuccess }" role="alert">
             <i class="fa-solid fa-circle-check"></i>
@@ -46,7 +46,7 @@ const flashSuccess = computed(() => usePage().props.flash.success)
             </div>
             <button type="button"
               class="ml-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex justify-center items-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"
-              data-dismiss-target="#login-error" aria-label="Close">
+              data-dismiss-target="#success-alert" aria-label="Close">
               <span class="sr-only">Close</span>
               <i class="fa-solid fa-xmark"></i>
             </button>

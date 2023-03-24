@@ -29,7 +29,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended('listing');
+        return redirect()->intended('user-account/profile');
     }
 
     public function destroy(Request $request)
