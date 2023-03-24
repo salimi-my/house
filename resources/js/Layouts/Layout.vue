@@ -94,12 +94,12 @@ let year = d.getFullYear();
                     </Link>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
-                    <button :class="[
+                    <Link href="/user-account/setting" :class="[
                       active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
                       'group flex w-full items-center rounded-md px-4 py-2 text-sm',
                     ]">
-                      Settings
-                    </button>
+                    Settings
+                    </Link>
                     </MenuItem>
                   </div>
                   <div class="px-1 py-1">
