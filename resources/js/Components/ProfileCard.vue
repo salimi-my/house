@@ -1,5 +1,5 @@
 <script setup>
-import { usePage } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 defineProps({
@@ -28,10 +28,10 @@ const user = computed(() => usePage().props.user)
           Settings
         </button>
         <hr class="my-2" />
-        <button type="button"
+        <Link href="/logout" method="delete" as="button"
           class="w-full my-2 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
-          <i class="fa-solid fa-right-from-bracket"></i> Sign out
-        </button>
+        <i class="fa-solid fa-right-from-bracket"></i> Sign out
+        </Link>
       </div>
     </div>
   </div>
