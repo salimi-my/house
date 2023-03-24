@@ -46,7 +46,7 @@ const update = () => {
   form.clearErrors()
   form.post(
     '/user-account/profile',
-    { onSuccess: () => form.reset('avatar') },
+    { onSuccess: () => form.reset('avatar') }
   )
 }
 </script>

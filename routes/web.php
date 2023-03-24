@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,6 @@ Route::post('user', [UserController::class, 'store'])->name('user.store');
 Route::prefix('user-account')->name('user-account.')->middleware('auth')->group(function () {
   Route::get('profile', [ProfileController::class, 'edit'])->name('profile');
   Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
+  Route::get('setting', [SettingController::class, 'edit'])->name('setting');
+  Route::post('setting', [SettingController::class, 'update'])->name('setting.update');
 });

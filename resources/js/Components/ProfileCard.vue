@@ -19,14 +19,14 @@ const user = computed(() => usePage().props.user)
       <span class="text-sm text-gray-500 dark:text-gray-400">{{ user?.email }}</span>
 
       <div class="w-full px-6 mt-8">
-        <button type="button"
+        <Link href="/user-account/profile" as="button"
           :class="[profile ? 'bg-blue-700 text-white dark:text-white' : '', 'w-full mb-2 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800']">
-          Profile
-        </button>
-        <button type="button"
+        Profile
+        </Link>
+        <Link href="/user-account/setting" as="button"
           :class="[setting ? 'bg-blue-700 text-white dark:text-white' : '', 'w-full mb-2 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800']">
-          Settings
-        </button>
+        Settings
+        </Link>
         <hr class="my-2" />
         <Link href="/logout" method="delete" as="button"
           class="w-full my-2 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
