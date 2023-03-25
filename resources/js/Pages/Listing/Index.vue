@@ -26,9 +26,21 @@ defineProps({
     </p>
     <Filter :filters="filters" />
   </div>
-  <div class="container max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-16 mt-4 px-4 xl:px-0">
+
+  <div v-if="listings.data.length"
+    class="container max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-16 mt-4 px-4 xl:px-0">
     <Card v-for="listing in listings.data" :listing="listing" :key="listing.id" />
   </div>
+
+  <div v-else class="container max-w-6xl px-4 my-4 xl:px-0">
+    <div
+      class="flex justify-center items-center border border-gray-300 dark:border-gray-700 rounded-lg min-height-listing px-4">
+      <p class="text-gray-900 dark:text-white text-xl text-center">
+        Sorry, there is no results for current queries.
+      </p>
+    </div>
+  </div>
+
   <div v-if="listings.data.length" class="w-full flex justify-center mt-10 mb-20">
     <Pagination :links="listings.links" />
   </div>

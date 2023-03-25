@@ -7,6 +7,10 @@
     @apply md:min-h-[calc(100vh_-_862px)] lg:min-h-[calc(100vh_-_502px)] xl:min-h-[calc(100vh_-_482px)];
   }
 
+  .min-height-listing {
+    @apply md:min-h-[calc(100vh_-_862px)] min-h-[calc(20vh)] lg:min-h-[calc(100vh_-_896px)] xl:min-h-[calc(100vh_-_876px)];
+  }
+
   .input-filter-l {
     @apply text-gray-900 dark:placeholder-gray-400 dark:text-white border border-gray-300 dark:border-gray-700 rounded-t-md rounded-l-md rounded-b-md rounded-r-none text-sm dark:bg-gray-800 focus:ring-blue-700 focus:border-blue-700 bg-gray-50 focus:z-10;
   }
