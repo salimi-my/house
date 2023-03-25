@@ -12,7 +12,10 @@ defineProps({
 
 <template>
   <div class="container max-w-2xl mt-20 px-4 xl:px-0 flex flex-col justify-between items-center">
-    <h1 class="text-3xl font-bold mb-4">Search for Properties</h1>
+    <h1 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Search for Properties</h1>
+    <h2 class="text-base font-medium mb-6 text-gray-900 dark:text-white">
+      Use our search tool to find the right home for you.
+    </h2>
     <Searchbar :filters="filters" />
   </div>
 
