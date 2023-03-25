@@ -15,10 +15,21 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Fahmi Mahfuz',
+            'email' => 'fahmimahfuz@example.com',
         ]);
 
-        \App\Models\Listing::factory(20)->create();
+        \App\Models\User::factory()->create([
+            'name' => 'Hilmi Narawi',
+            'email' => 'hilminarawi@example.com',
+        ]);
+
+        \App\Models\Listing::factory(12)->create([
+            'user_id' => 1
+        ]);
+
+        \App\Models\Listing::factory(12)->create([
+            'user_id' => 2
+        ]);
     }
 }

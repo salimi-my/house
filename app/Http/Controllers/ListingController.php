@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 class ListingController extends Controller
 {
     /**
+     * Authorizing resource controller.
+     */
+    public function __construct()
+    {
+        $this->authorizeResource(Listing::class, 'listing');
+    }
+
+    /**
      * Display a listing of the resource.
      */
     public function index()
@@ -35,7 +43,7 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        Listing::create(
+        $request->user()->listings()->create(
             $request->validate(
                 [
                     'type' => 'required|in:Landed,Highrise',
