@@ -6,6 +6,19 @@
   .min-height-screen {
     @apply md:min-h-[calc(100vh_-_862px)] lg:min-h-[calc(100vh_-_502px)] xl:min-h-[calc(100vh_-_482px)];
   }
+
+  .input-filter-l {
+    @apply text-gray-900 dark:placeholder-gray-400 dark:text-white border border-gray-300 dark:border-gray-700 rounded-t-md rounded-l-md rounded-b-md rounded-r-none text-sm dark:bg-gray-800 focus:ring-blue-700 focus:border-blue-700 bg-gray-50 focus:z-10;
+  }
+
+  .input-filter-r {
+    @apply text-gray-900 dark:placeholder-gray-400 dark:text-white border border-l-0 border-gray-300 dark:border-gray-700 rounded-t-md rounded-l-none rounded-b-none rounded-r-md text-sm dark:bg-gray-800 focus:ring-blue-700 focus:border-blue-700 bg-gray-50 focus:z-10 focus:border-l;
+  }
+}
+
+select:not([size]) {
+  padding-right: 1.5rem;
+  color: rgb(17, 24, 39, 0.7);
 }
 
 .swiper-button-next,

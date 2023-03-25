@@ -2,38 +2,31 @@
 import Buy from './SVG/Buy.vue';
 import Sell from './SVG/Sell.vue';
 import Rent from './SVG/Rent.vue';
+import Searchbar from '../../Components/Searchbar.vue'
+import FooterSearchbar from '../../Components/FooterSearchbar.vue'
+import State from '../../Components/State.vue'
+import { Link } from '@inertiajs/vue3'
 
 </script>
 
 <template>
   <section class="w-full bg-[url('/assets/images/house-banner.jpg')] bg-center bg-cover flex justify-center">
     <div class="container h-[35rem] flex justify-center items-center">
-      <form class="w-96 md:w-[40rem]">
-        <h1 class="text-4xl text-white font-bold text-center mb-4 drop-shadow-lg">Find your next house</h1>
-        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-        <div class="relative drop-shadow-lg">
-          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </div>
-          <input type="search" id="default-search"
-            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search for Houses..." required>
-          <button type="submit"
-            class="text-white absolute right-2.5 bottom-[9.5px] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-        </div>
-      </form>
+      <div class="w-96 md:w-[50rem]">
+        <h1 class="text-4xl text-white font-bold text-center mb-2 drop-shadow-lg">Find your next house</h1>
+        <h2 class="text-lg text-white font-medium text-center mb-5 drop-shadow-lg">Start your journey to owning your own
+          house with us.</h2>
+        <Searchbar />
+      </div>
     </div>
   </section>
 
   <section
-    class="max-w-5xl p-4 py-10 bg-white border border-gray-200 rounded-lg shadow lg:py-14 sm:px-24 dark:bg-gray-800 dark:border-gray-700 mx-4 xl:mx-auto -mt-12">
+    class=" max-w-5xl p-4 py-10 bg-white border border-gray-200 rounded-lg shadow lg:py-14 sm:px-24 dark:bg-gray-800 dark:border-gray-700 mx-4 xl:mx-auto -mt-12">
     <div class="grid lg:grid-cols-5 lg:gap-10">
       <div class="lg:col-span-2 relative">
-        <h2 class="mb-2 text-3xl font-medium text-gray-700 dark:text-white text-center lg:text-left">Take the first step
+        <h2 class="mb-2 text-3xl font-medium text-gray-700 dark:text-white text-center lg:text-left">Take the first
+          step
         </h2>
         <p class="text-lg text-gray-700 dark:text-white mb-8 text-center lg:text-left">
           Search for house or list your house on our platform.
@@ -66,27 +59,27 @@ import Rent from './SVG/Rent.vue';
       <div class="flex items-center bg-blue-700 dark:bg-blue-800 p-8 rounded-lg">
         <div>
           <h3 class="text-2xl font-semibold text-white mb-5">We have houses listing on all states in Malaysia!</h3>
-          <button type="button"
+          <Link href="/listing" as="button"
             class="text-blue-700 bg-white hover:opacity-80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
-            Let's Go!
-          </button>
+          Let's Go!
+          </Link>
         </div>
         <img src="/assets/images/malaysia-map.svg" class="w-40" />
       </div>
       <div class="grid grid-cols-2 mt-4 gap-4">
         <div class="bg-gray-400 dark:bg-gray-800 rounded-lg p-7">
           <h3 class="text-white text-lg md:text-3xl font-medium">We have property guides to help you</h3>
-          <button type="button"
+          <Link href="/listing" as="button"
             class="text-white mt-6 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read Them
-          </button>
+          Read Them
+          </Link>
         </div>
         <div class="bg-blue-200 dark:bg-blue-300 rounded-lg p-7">
           <h3 class="text-gray-700 text-lg md:text-3xl font-medium">View the latest home pricing trends</h3>
-          <button type="button"
+          <Link href="/listing" as="button"
             class="text-white mt-6 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Check it Out
-          </button>
+          Check it Out
+          </Link>
         </div>
       </div>
     </div>
@@ -96,19 +89,19 @@ import Rent from './SVG/Rent.vue';
         class="h-3/4 md:h-3/5 lg:h-auto xl:h-[68.5%] w-full rounded-lg brightness-50 object-cover" />
       <div class="absolute top-20 md:top-32 lg:top-20 left-10">
         <h3 class="text-white text-3xl md:text-4xl font-semibold">Let us guide you to<br />your new home</h3>
-        <button type="button"
+        <Link href="/listing" as="button"
           class="text-white mt-4 md:mt-8 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Get Started
-        </button>
+        Get Started
+        </Link>
       </div>
       <div class="absolute top-72 md:top-96 lg:top-[26rem] xl:top-[22rem] left-10">
-        <a href="https://flowbite.com/" class="flex items-center">
-          <img src="/assets/images/house-logo.png" class="h-16 md:h-20 mr-3" alt="House Logo" />
-          <div>
-            <h3 class="self-center text-2xl md:text-3xl font-bold whitespace-nowrap text-white">House</h3>
-            <h3 class="text-white text-md md:text-xl font-medium">We'll see you home</h3>
-          </div>
-        </a>
+        <Link href="/listing" class="flex items-center">
+        <img src="/assets/images/house-logo.png" class="h-16 md:h-20 mr-3" alt="House Logo" />
+        <div>
+          <h3 class="self-center text-2xl md:text-3xl font-bold whitespace-nowrap text-white">House</h3>
+          <h3 class="text-white text-md md:text-xl font-medium">We'll see you home</h3>
+        </div>
+        </Link>
       </div>
     </div>
   </section>
@@ -117,82 +110,82 @@ import Rent from './SVG/Rent.vue';
     <div class="max-w-6xl grid lg:grid-cols-3 gap-4 mx-4 xl:mx-auto py-16">
       <div
         class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
-        <a href="#">
-          <img class="rounded-t-lg" src="/assets/images/buy-home.png" alt="" />
-        </a>
+        <Link href="/listing">
+        <img class="rounded-t-lg" src="/assets/images/buy-home.png" alt="" />
+        </Link>
         <div class="p-5 px-8">
-          <a href="#">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Buy a home
-            </h3>
-          </a>
+          <Link href="/listing">
+          <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Buy a home
+          </h3>
+          </Link>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             Find your place with an immersive photo experience and the most listings, including things you won't find
             anywhere else.
           </p>
-          <button type="button"
+          <Link href="/listing" as="button"
             class="inline-flex items-center text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
-            Browse home
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
+          Browse home
+          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+          </Link>
         </div>
       </div>
       <div
         class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
-        <a href="#">
-          <img class="rounded-t-lg" src="/assets/images/sell-home.png" alt="" />
-        </a>
+        <Link href="/listing">
+        <img class="rounded-t-lg" src="/assets/images/sell-home.png" alt="" />
+        </Link>
         <div class="p-5 px-8">
-          <a href="#">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Sell a home
-            </h3>
-          </a>
+          <Link href="/listing">
+          <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Sell a home
+          </h3>
+          </Link>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             No matter what path you take to sell your home, we can help you navigate a successful sale.
           </p>
-          <button type="button"
+          <Link href="/register" as="button"
             class="inline-flex items-center text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
-            Create account
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
+          Create account
+          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+          </Link>
         </div>
       </div>
       <div
         class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
-        <a href="#">
-          <img class="rounded-t-lg" src="/assets/images/rent-home.png" alt="" />
-        </a>
+        <Link href="/listing">
+        <img class="rounded-t-lg" src="/assets/images/rent-home.png" alt="" />
+        </Link>
         <div class="p-5 px-8">
-          <a href="#">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Rent a home
-            </h3>
-          </a>
+          <Link href="/listing">
+          <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Rent a home
+          </h3>
+          </Link>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             We're creating a seamless online experience - from shopping on the largest rental network, to applying, to
             paying rent.
           </p>
-          <button type="button"
+          <Link href="/listing" as="button"
             class="inline-flex items-center text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
-            Find rentals
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
+          Find rentals
+          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+          </Link>
         </div>
       </div>
     </div>
@@ -209,78 +202,15 @@ import Rent from './SVG/Rent.vue';
         communities.
       </p>
       <div>
-        <button type="button"
+        <Link href="/listing" as="button"
           class="text-white mt-6 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Check it Out
-        </button>
+        Check it Out
+        </Link>
       </div>
     </div>
   </section>
 
-  <section class="w-full">
-    <div class="max-w-6xl mx-4 xl:mx-auto mt-20">
-      <div class="grid md:grid-cols-8 items-center mb-2">
-        <h3 class="md:col-span-7 mb-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
-          Explore Residential Areas in Malaysia
-        </h3>
-        <a href="#"
-          class="md:col-span-1 text-blue-700 hover:opacity-80 flex md:justify-end items-center gap-1 font-medium">
-          More
-          <i class="fa-solid fa-chevron-right"></i>
-        </a>
-      </div>
-      <div class="bg-gray-100 dark:bg-gray-700 rounded-lg grid grid-cols-4 py-5 px-6">
-        <div class="flex flex-col">
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Kuala Lumpur</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Kedah</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Pahang</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Sabah</a>
-        </div>
-        <div class="flex flex-col">
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Selangor</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Kelantan</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Perak</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Sarawak</a>
-        </div>
-        <div class="flex flex-col">
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Penang</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Melaka</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Perlis</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Terengganu</a>
-        </div>
-        <div class="flex flex-col">
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Johor</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Negeri Sembilan</a>
-          <a href="#" class="font-semibold leading-8 hover:opacity-80 dark:text-white">Putrajaya</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <State />
 
-  <section class="w-full mt-16 mb-20">
-    <h3 class="md:col-span-7 mb-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white text-center">
-      Search for next home now!
-    </h3>
-    <form class="max-w-lg mx-4 md:mx-auto mt-3">
-      <div class="flex">
-        <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your
-          Email
-        </label>
-        <div class="relative w-full">
-          <input type="search" id="search-dropdown"
-            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg rounded-l-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-            placeholder="Search City, Neighborhood, Zip, State, Street Address..." required>
-          <button type="submit"
-            class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            <span class="sr-only">Search</span>
-          </button>
-        </div>
-      </div>
-    </form>
-  </section>
+  <FooterSearchbar />
 </template>

@@ -1,14 +1,29 @@
 <script setup>
-import Card from '../../Components/Card.vue';
-import Pagination from '../../Components/Pagination.vue';
+import Card from '../../Components/Card.vue'
+import Searchbar from '../../Components/Searchbar.vue'
+import Filter from '../../Components/Filter.vue'
+import Pagination from '../../Components/Pagination.vue'
 
 defineProps({
-  listings: Object
+  listings: Object,
+  filters: Object
 })
 </script>
 
 <template>
-  <div class="container max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-16 mt-20 px-4 xl:px-0">
+  <div class="container max-w-2xl mt-20 px-4 xl:px-0 flex flex-col justify-between items-center">
+    <h1 class="text-3xl font-bold mb-4">Search for Properties</h1>
+    <Searchbar :filters="filters" />
+  </div>
+
+  <div
+    class="container max-w-6xl mt-10 md:mt-20 px-4 xl:px-0 flex flex-col max-sm:flex-col-reverse lg:flex-row justify-between items-center">
+    <p class="font-normal text-gray-700 dark:text-gray-400 md:py-4">
+      Showing {{ listings.from }} to {{ listings.to }} of {{ listings.total }} Results
+    </p>
+    <Filter :filters="filters" />
+  </div>
+  <div class="container max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-16 mt-4 px-4 xl:px-0">
     <Card v-for="listing in listings.data" :listing="listing" :key="listing.id" />
   </div>
   <div v-if="listings.data.length" class="w-full flex justify-center mt-10 mb-20">

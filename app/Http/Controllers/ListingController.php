@@ -18,13 +18,20 @@ class ListingController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $filters = $request->only([
+            'search', 'priceFrom', 'priceTo', 'bedrooms', 'bathrooms', 'areaFrom', 'areaTo'
+        ]);
+
         return inertia('Listing/Index', [
             'title' => 'Houses Listing | House',
             'description' => 'Online House Listing.',
-            'listings' => Listing::orderByDesc('created_at')
+            'filters' => $filters,
+            'listings' => Listing::latest()
+                ->filter($filters)
                 ->paginate(12)
+                ->withQueryString()
         ]);
     }
 
