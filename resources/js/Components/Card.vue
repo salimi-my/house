@@ -6,7 +6,7 @@ import CardDropdown from './CardDropdown.vue'
 
 defineProps({
   listing: Object,
-  editable: Boolean
+  userListing: Boolean
 })
 </script>
 
@@ -38,6 +38,6 @@ defineProps({
       </div>
     </div>
     </Link>
-    <CardDropdown v-if="editable" :listing="listing" />
+    <CardDropdown v-if="userListing" :listing="listing" />
   </div>
 </template>

@@ -61,7 +61,7 @@ watch(
 
   <div v-if="listings.data.length"
     class="container max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-16 mb-4 mt-2 px-4 xl:px-0">
-    <Card v-for="listing in listings.data" :listing="listing" :key="listing.id" :editable="true" />
+    <Card v-for="listing in listings.data" :listing="listing" :key="listing.id" :user-listing="true" />
   </div>
 
   <div v-else class="container max-w-6xl px-4 mt-10 mb-4 xl:px-0">
