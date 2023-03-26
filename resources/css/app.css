@@ -8,7 +8,11 @@
   }
 
   .min-height-listing {
-    @apply md:min-h-[calc(100vh_-_862px)] min-h-[calc(20vh)] lg:min-h-[calc(100vh_-_896px)] xl:min-h-[calc(100vh_-_876px)];
+    @apply min-h-[calc(20vh)] md:min-h-[calc(100vh_-_862px)] lg:min-h-[calc(100vh_-_896px)] xl:min-h-[calc(100vh_-_876px)];
+  }
+
+  .min-height-user-listing {
+    @apply min-h-[calc(20vh)] md:min-h-[calc(100vh_-_862px)] lg:min-h-[calc(100vh_-_802px)] xl:min-h-[calc(100vh_-_782px)];
   }
 
   .input-filter-l {

@@ -30,7 +30,7 @@ let year = d.getFullYear();
     <meta name="description" :content="props.description" />
   </Head>
   <main class="relative">
-    <header class="sticky top-0 z-10">
+    <header class="sticky top-0 z-50">
       <nav
         class="bg-white px-2 sm:px-4 py-2 md:py-1 w-full dark:bg-gray-800 drop-shadow-md border-b dark:border-gray-700">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
@@ -90,7 +90,15 @@ let year = d.getFullYear();
                       active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
                       'group flex w-full items-center rounded-md px-4 py-2 text-sm',
                     ]">
-                    Profile
+                    My Profile
+                    </Link>
+                    </MenuItem>
+                    <MenuItem v-slot="{ active }">
+                    <Link href="/user-account/my-listing" :class="[
+                      active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
+                      'group flex w-full items-center rounded-md px-4 py-2 text-sm',
+                    ]">
+                    My Listing
                     </Link>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
@@ -98,7 +106,7 @@ let year = d.getFullYear();
                       active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
                       'group flex w-full items-center rounded-md px-4 py-2 text-sm',
                     ]">
-                    Settings
+                    My Settings
                     </Link>
                     </MenuItem>
                   </div>

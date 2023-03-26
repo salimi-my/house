@@ -1,7 +1,7 @@
 <script setup>
-import Buy from './SVG/Buy.vue';
-import Sell from './SVG/Sell.vue';
-import Rent from './SVG/Rent.vue';
+import Buy from '../../Components/SVG/Buy.vue'
+import Sell from '../../Components/SVG/Sell.vue'
+import Rent from '../../Components/SVG/Rent.vue'
 import Searchbar from '../../Components/Searchbar.vue'
 import FooterSearchbar from '../../Components/FooterSearchbar.vue'
 import State from '../../Components/State.vue'
