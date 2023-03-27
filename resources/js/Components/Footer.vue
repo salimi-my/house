@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+const d = new Date();
+let year = d.getFullYear();
+</script>
 
 <template>
   <footer class="bg-gray-100 dark:bg-gray-700">

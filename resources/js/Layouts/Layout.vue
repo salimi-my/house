@@ -24,9 +24,6 @@ const props = defineProps({
 })
 
 const user = computed(() => usePage().props.user)
-
-const d = new Date();
-let year = d.getFullYear();
 </script>
 
 <template>
