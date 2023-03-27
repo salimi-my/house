@@ -1,27 +1,31 @@
 <script setup>
 import { useForm } from '@inertiajs/vue3'
 
+const props = defineProps({
+  listing: Object
+})
+
 const form = useForm({
-  type: null,
-  bedrooms: 0,
-  bathrooms: 0,
-  carparks: 0,
-  area: 0,
-  address: null,
-  city: null,
-  zip_code: null,
-  state: null,
-  country: null,
-  price: 0,
+  type: props.listing.type,
+  bedrooms: props.listing.bedrooms,
+  bathrooms: props.listing.bathrooms,
+  carparks: props.listing.carparks,
+  area: props.listing.area,
+  address: props.listing.address,
+  city: props.listing.city,
+  zip_code: props.listing.zip_code,
+  state: props.listing.state,
+  country: props.listing.country,
+  price: props.listing.price,
 })
 
 const typeOptions = ['Highrise', 'Landed'];
 
-const create = () => form.post('/listing')
+const update = () => form.put(`/user-account/my-listing/${props.listing.id}`)
 </script>
 
 <template>
-  <form @submit.prevent="create">
+  <form @submit.prevent="update">
     <div>
       <div>
         <label>Type</label>
@@ -114,7 +118,7 @@ const create = () => form.post('/listing')
       </div>
 
       <div>
-        <button type="submit">Create</button>
+        <button type="submit">Edit</button>
       </div>
     </div>
   </form>

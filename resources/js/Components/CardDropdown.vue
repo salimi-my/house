@@ -33,7 +33,7 @@ defineProps({
             </a>
             </MenuItem>
             <MenuItem v-slot="{ active }">
-            <Link href="/user-account/profile" :class="[
+            <Link :href="`/user-account/my-listing/${listing.id}/edit`" :class="[
               active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
               'group flex w-full items-center rounded-md px-4 py-2 text-sm',
             ]">

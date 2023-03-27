@@ -39,6 +39,91 @@ class UserListingController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return inertia('UserListing/Create', [
+            'title' => 'Add House Listing | House',
+            'description' => 'Online House Listing.'
+        ]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        $id = $request->user()->listings()->create(
+            $request->validate(
+                [
+                    'type' => 'required|in:Landed,Highrise',
+                    'bedrooms' => 'required|integer|min:0|max:100',
+                    'bathrooms' => 'required|integer|min:0|max:100',
+                    'carparks' => 'required|integer|min:0|max:100',
+                    'area' => 'required|integer|min:10|max:10000',
+                    'address' => 'required',
+                    'city' => 'required',
+                    'zip_code' => 'required|numeric',
+                    'state' => 'required',
+                    'country' => 'required',
+                    'price' => 'required|integer|min:1|max:20000000',
+                ],
+                [
+                    'type.in' => 'The type field must be Landed or Highrise',
+                    'zip_code.required' => 'The postcode field is required',
+                    'zip_code.numeric' => 'The postcode field is must be a number',
+                ]
+            )
+        )->id;
+
+        return redirect()->route('user-account.my-listing.index')->with('success', 'Your Property ID: ' . $id . ' successfully created!');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Listing $listing)
+    {
+        return inertia('UserListing/Edit', [
+            'title' => 'Edit Property | House',
+            'description' => 'Online House Listing.',
+            'listing' => $listing
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Listing $listing)
+    {
+        $listing->update(
+            $request->validate(
+                [
+                    'type' => 'required|in:Landed,Highrise',
+                    'bedrooms' => 'required|integer|min:0|max:100',
+                    'bathrooms' => 'required|integer|min:0|max:100',
+                    'carparks' => 'required|integer|min:0|max:100',
+                    'area' => 'required|integer|min:10|max:10000',
+                    'address' => 'required',
+                    'city' => 'required',
+                    'zip_code' => 'required|numeric',
+                    'state' => 'required',
+                    'country' => 'required',
+                    'price' => 'required|integer|min:1|max:20000000',
+                ],
+                [
+                    'type.in' => 'The type field must be Landed or Highrise',
+                    'zip_code.required' => 'The postcode field is required',
+                    'zip_code.numeric' => 'The postcode field is must be a number',
+                ]
+            )
+        );
+
+        return redirect()->route('user-account.my-listing.index')->with('success', 'Your Property ID: ' . $listing->id . ' successfully edited!');
+    }
+
+    /**
      * Remove the specified resource from storage.
      */
     public function destroy(Listing $listing)

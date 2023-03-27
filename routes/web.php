@@ -22,8 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 
-Route::resource('listing', ListingController::class)->only(['create', 'store', 'edit', 'update'])->middleware('auth');
-Route::resource('listing', ListingController::class)->except(['create', 'store', 'edit', 'update', 'destroy']);
+Route::resource('listing', ListingController::class)->only(['index', 'show']);
 
 Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('login', [AuthController::class, 'store'])->name('login.store');
@@ -39,5 +38,6 @@ Route::prefix('user-account')->name('user-account.')->middleware('auth')->group(
   Route::get('setting', [SettingController::class, 'edit'])->name('setting');
   Route::post('setting', [SettingController::class, 'update'])->name('setting.update');
 
-  Route::resource('my-listing', UserListingController::class)->parameters(['my-listing' => 'listing'])->only(['index', 'destroy']);
+  Route::resource('my-listing', UserListingController::class)->parameters(['my-listing' => 'listing'])
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 });
