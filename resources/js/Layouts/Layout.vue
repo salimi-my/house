@@ -7,6 +7,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import Bars from '../Components/SVG/Bars.vue'
 import Moon from '../Components/SVG/Moon.vue'
 import Sun from '../Components/SVG/Sun.vue'
+import Plus from '../Components/SVG/Plus.vue'
 import Footer from '../Components/Footer.vue'
 
 onMounted(() => {
@@ -43,17 +44,30 @@ let year = d.getFullYear();
           <span class="self-center text-xl font-bold whitespace-nowrap text-blue-700 dark:text-gray-400">House</span>
           </Link>
           <div class="flex md:order-2">
-            <button @click="toggleDark()" id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button"
+            <button @click="toggleDark()" id="theme-toggle" data-tooltip-target="dark-toggle" type="button"
               class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
               <Moon v-if="!isDark" :class="'w-5 h-5'" />
               <Sun v-else :class="'w-5 h-5'" />
               <span class="sr-only">Switch Mode</span>
             </button>
-            <div id="tooltip-toggle" role="tooltip"
+            <div id="dark-toggle" role="tooltip"
               class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip opacity-0 invisible"
               style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1320px, -62px);"
               data-popper-placement="top">
               Switch Mode
+              <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; left: 0px; transform: translate(69px, 0px);"></div>
+            </div>
+            <Link href="/user-account/my-listing/create" data-tooltip-target="add-toggle" as="button"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+            <Plus :class="'w-5 h-5'" />
+            <span class="sr-only">Add Listing</span>
+            </Link>
+            <div id="add-toggle" role="tooltip"
+              class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip opacity-0 invisible"
+              style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1320px, -62px);"
+              data-popper-placement="top">
+              Add Listing
               <div class="tooltip-arrow" data-popper-arrow=""
                 style="position: absolute; left: 0px; transform: translate(69px, 0px);"></div>
             </div>
