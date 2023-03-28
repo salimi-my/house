@@ -24,7 +24,7 @@ defineProps({
         <MenuItems
           class="absolute right-0 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700 dark:divide-gray-600">
           <div class="px-1 py-1">
-            <MenuItem v-slot="{ active }">
+            <MenuItem v-if="!listing.deleted_at" v-slot="{ active }">
             <a :href="`/listing/${listing.id}`" :class="[
               active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
               'group flex w-full items-center rounded-md px-4 py-2 text-sm',
@@ -32,7 +32,7 @@ defineProps({
               <i class="fa-regular fa-eye fa-lg mr-2"></i> View
             </a>
             </MenuItem>
-            <MenuItem v-slot="{ active }">
+            <MenuItem v-if="!listing.deleted_at" v-slot="{ active }">
             <Link :href="`/user-account/my-listing/${listing.id}/edit`" :class="[
               active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
               'group flex w-full items-center rounded-md px-4 py-2 text-sm',
@@ -40,7 +40,7 @@ defineProps({
             <i class="fa-solid fa-pen-to-square fa-lg mr-2"></i> Edit
             </Link>
             </MenuItem>
-            <MenuItem v-slot="{ active }">
+            <MenuItem v-if="!listing.deleted_at" v-slot="{ active }">
             <Link :href="`/user-account/my-listing/${listing.id}`" method="delete" as="button" :class="[
               active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
               'group flex w-full items-center rounded-md px-4 py-2 text-sm',
