@@ -55,12 +55,12 @@ const user = computed(() => usePage().props.user)
               <div class="tooltip-arrow" data-popper-arrow=""
                 style="position: absolute; left: 0px; transform: translate(69px, 0px);"></div>
             </div>
-            <Link href="/user-account/my-listing/create" data-tooltip-target="add-toggle" as="button"
+            <Link v-if="user" href="/user-account/my-listing/create" data-tooltip-target="add-toggle" as="button"
               class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
             <Plus :class="'w-5 h-5'" />
             <span class="sr-only">Add Listing</span>
             </Link>
-            <div id="add-toggle" role="tooltip"
+            <div v-if="user" id="add-toggle" role="tooltip"
               class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip opacity-0 invisible"
               style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1320px, -62px);"
               data-popper-placement="top">
