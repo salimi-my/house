@@ -31,5 +31,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\Listing::factory(12)->create([
             'user_id' => 2
         ]);
+
+        $this->call([
+            CountrySeeder::class
+        ]);
     }
 }
