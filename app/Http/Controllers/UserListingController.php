@@ -90,7 +90,8 @@ class UserListingController extends Controller
         return inertia('UserListing/Edit', [
             'title' => 'Edit Property | House',
             'description' => 'Online House Listing.',
-            'listing' => $listing
+            'listing' => $listing,
+            'countries' => Country::all()
         ]);
     }
 
