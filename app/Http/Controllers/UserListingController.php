@@ -135,4 +135,14 @@ class UserListingController extends Controller
 
         return redirect()->back()->with('success', 'Your Property ID: ' . $listing->id . ' successfully deleted!');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function restore(Listing $listing)
+    {
+        $listing->restore();
+
+        return redirect()->back()->with('success', 'Your Property ID: ' . $listing->id . ' successfully restored!');
+    }
 }

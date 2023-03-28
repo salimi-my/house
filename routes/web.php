@@ -38,6 +38,8 @@ Route::prefix('user-account')->name('user-account.')->middleware('auth')->group(
   Route::get('setting', [SettingController::class, 'edit'])->name('setting');
   Route::post('setting', [SettingController::class, 'update'])->name('setting.update');
 
+  Route::put('my-listing/{listing}/restore', [UserListingController::class, 'restore'])
+    ->name('my-listing.restore')->withTrashed();
   Route::resource('my-listing', UserListingController::class)->parameters(['my-listing' => 'listing'])
-    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])->withTrashed();
 });
