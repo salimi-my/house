@@ -23,6 +23,8 @@ const form = useForm({
 const typeOptions = ['Highrise', 'Landed'];
 
 const update = () => form.put(`/user-account/my-listing/${props.listing.id}`)
+
+const back = () => window.history.back()
 </script>
 
 <template>
@@ -33,10 +35,10 @@ const update = () => form.put(`/user-account/my-listing/${props.listing.id}`)
       House
       </Link>
       <div class="w-full flex justify-start mb-3 ml-1">
-        <Link href="/user-account/my-listing"
+        <a href="" @click.prevent="back"
           class="text-md font-bold tracking-tight text-gray-500 dark:text-white hover:text-blue-700 dark:hover:text-blue-700">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Listing
-        </Link>
+          <i class="fa-solid fa-arrow-left mr-1"></i> Back to Listing
+        </a>
       </div>
       <div class="w-full bg-white rounded-lg shadow dark:border xl:p-0 dark:bg-gray-800 dark:border-gray-700">
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
