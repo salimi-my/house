@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -45,7 +46,8 @@ class UserListingController extends Controller
     {
         return inertia('UserListing/Create', [
             'title' => 'Add House Listing | House',
-            'description' => 'Online House Listing.'
+            'description' => 'Online House Listing.',
+            'countries' => Country::all()
         ]);
     }
 
