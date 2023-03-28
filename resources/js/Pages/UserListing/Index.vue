@@ -35,7 +35,7 @@ watch(
 
   <div class="container max-w-6xl px-4 mt-0 xl:px-0 flex justify-center">
     <div id="success-alert"
-      :class="[flashSuccess === null ? 'hidden' : '', 'flex p-4 my-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 items-center w-full lg:max-w-[350px] xl:max-w-[363px] -mb-12']"
+      :class="[flashSuccess === null ? 'hidden' : '', 'flex p-4 my-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 items-center w-full lg:max-w-[350px] xl:max-w-[363px] -mb-8']"
       role="alert">
       <i class="fa-solid fa-circle-check"></i>
       <span class="sr-only">Success</span>
