@@ -80,7 +80,7 @@ const back = () => window.history.back()
       </div>
 
       <div v-if="listing.images.length"
-        class="w-full mt-10 border border-gray-300 dark:border-gray-700 rounded-lg p-4 grid grid-cols-3 gap-4 mb-10">
+        class="w-full mt-10 border border-gray-300 dark:border-gray-700 rounded-lg p-4 grid grid-cols-3 gap-4 mb-10 min-height-listing-image">
         <div v-for="image in listing.images" :key="image.id" class="flex flex-col justify-between">
           <img :src="image.src" class="rounded-md object-cover h-full" />
           <Link :href="`/user-account/my-listing/${props.listing.id}/image/${image.id}`" method="delete" as="button"
@@ -91,7 +91,7 @@ const back = () => window.history.back()
       </div>
 
       <div v-else
-        class="text-gray-500 dark:text-gray-400 w-full mt-10 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex justify-center items-center h-52 mb-10">
+        class="text-gray-500 dark:text-gray-400 w-full mt-10 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex justify-center items-center h-52 mb-10 min-height-listing-image">
         There are no images yet. Start uploading.
       </div>
     </form>
