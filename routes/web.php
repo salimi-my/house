@@ -7,6 +7,7 @@ use App\Http\Controllers\ListingController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserListingController;
+use App\Http\Controllers\UserListingImageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,4 +43,7 @@ Route::prefix('user-account')->name('user-account.')->middleware('auth')->group(
     ->name('my-listing.restore')->withTrashed();
   Route::resource('my-listing', UserListingController::class)->parameters(['my-listing' => 'listing'])
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])->withTrashed();
+
+  Route::resource('my-listing.image', UserListingImageController::class)->parameters((['my-listing' => 'listing']))
+    ->only(['create', 'store', 'destroy']);
 });
