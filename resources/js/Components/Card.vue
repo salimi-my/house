@@ -14,7 +14,7 @@ defineProps({
   <div
     class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg hover:scale-[1.01] transition ease-in-out duration-100 relative w-full">
     <Link :href="userListing ? '' : `/listing/${listing.id}`">
-    <Carousel />
+    <Carousel :images="listing.images" />
     </Link>
     <Link :href="userListing ? '' : `/listing/${listing.id}`">
     <div class="p-5">

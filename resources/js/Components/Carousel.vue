@@ -6,14 +6,17 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 defineProps({
-  height: String
+  images: Object
 })
 </script>
 
 <template>
   <Swiper :modules="[Navigation, Pagination]" :pagination="true" :loop="true" navigation>
-    <SwiperSlide v-for="n in 5" :key="n">
-      <img class="rounded-t-lg w-full h-[250px] object-cover" :src="'/assets/images/property-' + n + '.webp'" alt="" />
+    <SwiperSlide v-if="images.length" v-for="image in images" :key="image.id">
+      <img class="rounded-t-lg w-full h-[250px] object-cover" :src="image.src" alt="" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img class="rounded-t-lg w-full h-[250px] object-cover" src="/assets/images/image-placeholder.jpg" alt="" />
     </SwiperSlide>
   </Swiper>
 </template>

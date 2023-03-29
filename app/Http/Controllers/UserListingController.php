@@ -33,6 +33,7 @@ class UserListingController extends Controller
             'filters' => $filters,
             'listings' => Auth::user()
                 ->listings()
+                ->with('images')
                 ->filter($filters)
                 ->withCount('images')
                 ->paginate(9)

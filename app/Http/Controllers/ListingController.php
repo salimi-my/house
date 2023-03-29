@@ -28,7 +28,8 @@ class ListingController extends Controller
             'title' => 'Houses Listing | House',
             'description' => 'Online House Listing.',
             'filters' => $filters,
-            'listings' => Listing::latest()
+            'listings' => Listing::with('images')
+                ->latest()
                 ->filter($filters)
                 ->paginate(12)
                 ->withQueryString()
