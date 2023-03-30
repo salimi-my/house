@@ -27,7 +27,7 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
 
     <div
       class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:col-span-3">
-      <CarouselGallery />
+      <CarouselGallery :images="listing.images" />
     </div>
 
     <div class="flex flex-col lg:col-span-2 space-y-4">

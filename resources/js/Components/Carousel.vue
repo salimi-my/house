@@ -15,7 +15,7 @@ defineProps({
     <SwiperSlide v-if="images.length" v-for="image in images" :key="image.id">
       <img class="rounded-t-lg w-full h-[250px] object-cover" :src="image.src" alt="" />
     </SwiperSlide>
-    <SwiperSlide>
+    <SwiperSlide v-else>
       <img class="rounded-t-lg w-full h-[250px] object-cover" src="/assets/images/image-placeholder.jpg" alt="" />
     </SwiperSlide>
   </Swiper>

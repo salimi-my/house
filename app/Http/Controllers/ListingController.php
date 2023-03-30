@@ -41,6 +41,7 @@ class ListingController extends Controller
      */
     public function show(Listing $listing)
     {
+        $listing->load(['images']);
         return inertia('Listing/Show', [
             'title' => 'House Details | House',
             'description' => 'Online House Listing.',
