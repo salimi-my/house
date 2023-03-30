@@ -12,8 +12,6 @@ const form = useForm({
 
 const imageErrors = computed(() => Object.values(form.errors))
 
-const canUpload = computed(() => form.images.length)
-
 const upload = () => {
   form.post(
     '/user-account/my-listing/' + props.listing.id + '/image',
@@ -28,8 +26,6 @@ const addFiles = (e) => {
 
   upload();
 }
-
-const back = () => window.history.back()
 </script>
 
 <template>
@@ -42,10 +38,10 @@ const back = () => window.history.back()
 
   <div class="container max-w-6xl px-4 mt-0 xl:px-0 flex flex-col items-center justify-center">
     <div class="w-full flex justify-start mb-3 ml-1">
-      <a href="" @click.prevent="back"
+      <Link href="/user-account/my-listing"
         class="text-md font-bold tracking-tight text-gray-500 dark:text-white hover:text-blue-700 dark:hover:text-blue-700">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Listing
-      </a>
+      <i class="fa-solid fa-arrow-left mr-1"></i> Back to Listing
+      </Link>
     </div>
     <form @submit.prevent="upload" enctype="multipart/form-data" class="w-full flex flex-col justify-center items-center">
       <div class="flex items-center justify-center w-full">
