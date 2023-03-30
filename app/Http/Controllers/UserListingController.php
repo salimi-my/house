@@ -36,8 +36,21 @@ class UserListingController extends Controller
                 ->with('images')
                 ->filter($filters)
                 ->withCount('images')
+                ->withCount('offers')
                 ->paginate(9)
                 ->withQueryString()
+        ]);
+    }
+
+    /**
+     * Show the list of offers.
+     */
+    public function show(Listing $listing)
+    {
+        return inertia('UserListing/Show', [
+            'title' => 'Listing Offers | House',
+            'description' => 'Online House Listing.',
+            'listing' => $listing->load(['offers', 'offers.user'])
         ]);
     }
 

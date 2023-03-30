@@ -50,6 +50,15 @@ defineProps({
             </Link>
             </MenuItem>
             <MenuItem v-if="!listing.deleted_at" v-slot="{ active }">
+            <Link :href="`/user-account/my-listing/${listing.id}`" :class="[
+              active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
+              'group flex w-full items-center rounded-md px-4 py-2 text-sm',
+            ]">
+            <i class="fa-solid fa-gavel fa-lg flex justify-center w-6 h-auto mr-2"></i> Offers
+            ({{ listing.offers_count }})
+            </Link>
+            </MenuItem>
+            <MenuItem v-if="!listing.deleted_at" v-slot="{ active }">
             <Link :href="`/user-account/my-listing/${listing.id}`" method="delete" as="button" :class="[
               active ? 'bg-gray-100 dark:bg-gray-600 dark:text-white' : 'text-gray-700 dark:text-gray-200',
               'group flex w-full items-center rounded-md px-4 py-2 text-sm',

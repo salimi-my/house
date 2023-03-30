@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ListingController extends Controller
 {
@@ -31,6 +32,7 @@ class ListingController extends Controller
             'listings' => Listing::with('images')
                 ->latest()
                 ->filter($filters)
+                ->withoutSold()
                 ->paginate(12)
                 ->withQueryString()
         ]);
@@ -42,10 +44,12 @@ class ListingController extends Controller
     public function show(Listing $listing)
     {
         $listing->load(['images']);
+        $offer = !Auth::user() ? null : $listing->offers()->byMe()->first();
         return inertia('Listing/Show', [
             'title' => 'House Details | House',
             'description' => 'Online House Listing.',
-            'listing' => $listing
+            'listing' => $listing,
+            'offerMade' => $offer
         ]);
     }
 }

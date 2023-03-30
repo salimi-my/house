@@ -1,18 +1,25 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
-import { ref } from 'vue';
+import { Link, usePage } from '@inertiajs/vue3';
+import { ref, computed } from 'vue';
 import CarouselGallery from '../../Components/CarouselGallery.vue'
+import OfferSubmitted from '../../Components/OfferSubmitted.vue';
 import Price from '../../Components/Price.vue'
+import SubmitOffer from '../../Components/SubmitOffer.vue';
 import { useMonthlyPayment } from '../../Composables/useMonthlyPayment'
 
 const props = defineProps({
-  listing: Object
+  listing: Object,
+  offerMade: Object
 })
+
+const offer = ref(props.listing.price)
 
 const interestRate = ref(2.5)
 const duration = ref(25)
 
-const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props.listing.price, interestRate, duration)
+const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(offer, interestRate, duration)
+
+const user = computed(() => usePage().props.user)
 </script>
 
 <template>
@@ -23,15 +30,18 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
     </Link>
   </div>
 
-  <div class="container max-w-6xl grid lg:grid-cols-5 mt-2 mb-20 px-4 xl:px-0 big-carousel gap-4">
+  <div class="container max-w-6xl grid lg:grid-cols-5 mt-2 mb-20 px-4 xl:px-0 gap-4">
 
-    <div
-      class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:col-span-3">
-      <CarouselGallery :images="listing.images" />
+    <div class="w-full lg:col-span-3">
+      <div class="p-6 pb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="text-lg font-bold tracking-tight text-gray-500 dark:text-white mb-4">House Images</h5>
+        <CarouselGallery :images="listing.images" />
+      </div>
     </div>
 
     <div class="flex flex-col lg:col-span-2 space-y-4">
-      <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div
+        class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative overflow-hidden">
         <h5 class="text-lg font-bold tracking-tight text-gray-500 dark:text-white mb-4">House Details</h5>
         <div class="flex justify-between items-center mb-4">
           <Price :price="listing.price" class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white" />
@@ -58,6 +68,12 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
             <div><i class="fa-solid fa-car text-blue-700 mr-1"></i> {{ listing.carparks }}</div>
           </div>
           <h5 class="text-gray-900 dark:text-white text-right font-semibold col-span-3">{{ listing.area }} sqft</h5>
+        </div>
+        <div v-if="listing.user_id == user?.id" class="absolute right-0 top-0 h-16 w-16">
+          <div
+            class="absolute right-[-28px] top-[10px] w-[100px] transform rotate-45 bg-blue-600 text-center text-white text-sm font-semibold py-1 shadow-md">
+            Yours
+          </div>
         </div>
       </div>
 
@@ -97,6 +113,10 @@ const { monthlyPayment, totalPaid, totalInterestPaid } = useMonthlyPayment(props
           </div>
         </div>
       </div>
+
+      <SubmitOffer v-if="user && !offerMade" @offer-updated="offer = $event" :listing-id="listing.id"
+        :price="listing.price" />
+      <OfferSubmitted v-if="user && offerMade" :offer="offerMade" />
     </div>
 
   </div>

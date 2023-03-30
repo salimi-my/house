@@ -19,6 +19,10 @@
     @apply min-h-[calc(20vh)] md:min-h-[calc(100vh_-_958px)] lg:min-h-[calc(100vh_-_958px)] xl:min-h-[calc(100vh_-_1018px)];
   }
 
+  .min-height-listing-offers {
+    @apply min-h-[calc(20vh)] md:min-h-[calc(100vh_-_958px)] lg:min-h-[calc(100vh_-_786px)] xl:min-h-[calc(100vh_-_766px)];
+  }
+
   .input-filter-l {
     @apply text-gray-900 dark:placeholder-gray-400 dark:text-white border border-gray-300 dark:border-gray-700 rounded-t-md rounded-l-md rounded-b-md rounded-r-none text-sm dark:bg-gray-800 focus:ring-blue-700 focus:border-blue-700 bg-gray-50 focus:z-10;
   }

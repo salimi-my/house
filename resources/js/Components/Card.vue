@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg hover:scale-[1.01] transition ease-in-out duration-100 relative w-full">
+    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg hover:scale-[1.01] transition ease-in-out duration-100 relative overflow-hidden w-full">
     <Link :href="userListing ? '' : `/listing/${listing.id}`">
     <Carousel :images="listing.images" />
     </Link>
@@ -39,5 +39,11 @@ defineProps({
     </div>
     </Link>
     <CardDropdown v-if="userListing" :listing="listing" />
+    <div v-if="listing.sold_at" class="absolute left-0 top-0 h-16 w-16">
+      <div
+        class="absolute left-[-23px] top-[14px] w-[100px] transform -rotate-45 bg-green-500 text-center text-white text-xs font-semibold py-1 shadow-md z-20 uppercase">
+        Sold
+      </div>
+    </div>
   </div>
 </template>
