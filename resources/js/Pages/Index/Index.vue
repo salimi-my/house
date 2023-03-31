@@ -10,7 +10,7 @@ import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
-  <section class="w-full bg-[url('/storage/images/house-banner.jpg')] bg-center bg-cover flex justify-center">
+  <section class="w-full bg-[url('/house-banner.jpg')] bg-center bg-cover flex justify-center">
     <div class="container h-[35rem] flex justify-center items-center">
       <div class="w-96 md:w-[50rem]">
         <h1 class="text-4xl text-white font-bold text-center mb-2 drop-shadow-lg">Find your next house</h1>
