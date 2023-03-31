@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\ListingOfferController;
+use App\Http\Controllers\NotificationSeenController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserListingAcceptController;
@@ -28,6 +29,8 @@ Route::get('/', [IndexController::class, 'index']);
 Route::resource('listing', ListingController::class)->only(['index', 'show']);
 
 Route::resource('listing.offer', ListingOfferController::class)->middleware('auth')->only(['store']);
+
+Route::put('notification/{notification}/seen', NotificationSeenController::class)->middleware('auth')->name('notification.seen');
 
 Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('login', [AuthController::class, 'store'])->name('login.store');
