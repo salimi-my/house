@@ -1,4 +1,4 @@
-# [Waktu Solat](https://house.salimi.my) &middot; [![Author Salimi](https://img.shields.io/badge/Author-Salimi-%3C%3E)](https://www.linkedin.com/in/mohamad-salimi/)
+# [House](https://house.salimi.my) &middot; [![Author Salimi](https://img.shields.io/badge/Author-Salimi-%3C%3E)](https://www.linkedin.com/in/mohamad-salimi/)
 
 This is an online property listing and marketplace app created using Laravel, Vue and Inertia. Users can search for properties listed out on the app and make an offer to the owner/realtor. The app need users to be registered to list out their properties or make an offer. Offer made will be notified to the owner/realtor.
 
