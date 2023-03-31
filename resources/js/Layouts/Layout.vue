@@ -33,6 +33,7 @@ const notificationList = computed(() => usePage().props.user.notificationList)
 <template>
   <Head>
     <title>{{ props.title }}</title>
+    <meta name="title" :content="props.title">
     <meta name="description" :content="props.description" />
   </Head>
   <main class="relative">

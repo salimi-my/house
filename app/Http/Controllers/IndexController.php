@@ -10,8 +10,8 @@ class IndexController extends Controller
     public function index()
     {
         return inertia('Index/Index', [
-            'title' => 'House | Online House Listing',
-            'description' => 'Online House Listing.'
+            'title' => 'House — Online Property Listing',
+            'description' => 'This is an online property listing and marketplace platform app created using Laravel, Vue and Inertia.'
         ]);
     }
 }
