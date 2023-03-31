@@ -10,7 +10,7 @@ let year = d.getFullYear();
         <div class="grid gap-12 lg:grid-cols-6 lg:gap-8 xl:gap-24">
           <div class="col-span-2">
             <a href="#" class="flex mb-5">
-              <img src="/assets/images/house-logo.png" class="h-8 mr-3" alt="House Logo">
+              <img src="../Assets/Images/house-logo.png" class="h-8 mr-3" alt="House Logo">
               <span class="self-center text-xl font-bold whitespace-nowrap text-blue-700 dark:text-white">House</span>
             </a>
             <p class="max-w-lg mb-3 text-gray-600 dark:text-gray-400">

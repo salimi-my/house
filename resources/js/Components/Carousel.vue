@@ -16,7 +16,7 @@ defineProps({
       <img class="rounded-t-lg w-full h-[250px] object-cover" :src="image.src" alt="" />
     </SwiperSlide>
     <SwiperSlide v-else>
-      <img class="rounded-t-lg w-full h-[250px] object-cover" src="/assets/images/image-placeholder.jpg" alt="" />
+      <img class="rounded-t-lg w-full h-[250px] object-cover" src="../Assets/Images/image-placeholder.jpg" alt="" />
     </SwiperSlide>
   </Swiper>
 </template>

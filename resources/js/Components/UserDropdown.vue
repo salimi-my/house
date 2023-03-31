@@ -14,7 +14,7 @@ defineProps({
         class="flex items-center text-sm font-medium p-1 text-gray-700 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-500 md:mr-0 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white">
         <span class="sr-only">Open user menu</span>
         <img class="w-8 h-8 mr-2 rounded-full object-cover"
-          :src="user?.avatar ? user?.avatar : '/assets/images/avatar.svg'" alt="user photo">
+          :src="user?.avatar ? user?.avatar : '/storage/images/avatar.svg'" alt="user photo">
         <span class="w-0 lg:w-full truncate lg:mr-2">{{ user?.name }}</span>
         <i class="fa-solid fa-caret-down"></i>
       </MenuButton>

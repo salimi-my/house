@@ -29,7 +29,7 @@ const update = () => form.put(`/user-account/my-listing/${props.listing.id}`)
   <section class="w-full bg-gray-50 dark:bg-gray-900">
     <div class="flex flex-col items-center justify-center px-6 pt-32 py-36 lg:w-[650px] mx-auto min-height-screen">
       <Link href="/" class="flex items-center mb-0 text-2xl font-bold text-blue-700 dark:text-white">
-      <img class="w-8 h-8 mr-2" src="/assets/images/house-logo.png" alt="House Logo">
+      <img class="w-8 h-8 mr-2" src="../../Assets/Images/house-logo.png" alt="House Logo">
       House
       </Link>
       <div class="w-full flex justify-start mb-3 ml-1">

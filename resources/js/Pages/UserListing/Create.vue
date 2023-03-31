@@ -28,7 +28,7 @@ const create = () => form.post('/user-account/my-listing')
   <section class="w-full bg-gray-50 dark:bg-gray-900">
     <div class="flex flex-col items-center justify-center px-6 pt-32 py-36 lg:w-[650px] mx-auto min-height-screen">
       <Link href="/" class="flex items-center mb-6 text-2xl font-bold text-blue-700 dark:text-white">
-      <img class="w-8 h-8 mr-2" src="/assets/images/house-logo.png" alt="House Logo">
+      <img class="w-8 h-8 mr-2" src="../../Assets/Images/house-logo.png" alt="House Logo">
       House
       </Link>
       <div class="w-full bg-white rounded-lg shadow dark:border xl:p-0 dark:bg-gray-800 dark:border-gray-700">

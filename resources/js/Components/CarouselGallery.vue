@@ -23,7 +23,7 @@ const setThumbsSwiper = (swiper) => {
         <img class="rounded-lg w-full h-[300px] md:h-[500px] object-cover" :src="image.src" alt="" />
       </SwiperSlide>
       <SwiperSlide v-else>
-        <img class="rounded-lg w-full h-[300px] md:h-[500px] object-cover" src="/assets/images/image-placeholder.jpg"
+        <img class="rounded-lg w-full h-[300px] md:h-[500px] object-cover" src="../Assets/Images/image-placeholder.jpg"
           alt="" />
       </SwiperSlide>
     </Swiper>
@@ -36,7 +36,7 @@ const setThumbsSwiper = (swiper) => {
       </SwiperSlide>
       <SwiperSlide v-else>
         <img class="rounded-md w-full h-[100px] md:h-[130px] object-cover cursor-pointer hover:opacity-80"
-          src="/assets/images/image-placeholder.jpg" alt="" />
+          src="../Assets/Images/image-placeholder.jpg" alt="" />
       </SwiperSlide>
     </Swiper>
   </div>

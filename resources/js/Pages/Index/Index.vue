@@ -10,7 +10,7 @@ import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
-  <section class="w-full bg-[url('/assets/images/house-banner.jpg')] bg-center bg-cover flex justify-center">
+  <section class="w-full bg-[url('/storage/images/house-banner.jpg')] bg-center bg-cover flex justify-center">
     <div class="container h-[35rem] flex justify-center items-center">
       <div class="w-96 md:w-[50rem]">
         <h1 class="text-4xl text-white font-bold text-center mb-2 drop-shadow-lg">Find your next house</h1>
@@ -31,7 +31,7 @@ import { Link } from '@inertiajs/vue3'
         <p class="text-lg text-gray-700 dark:text-white mb-8 text-center lg:text-left">
           Search for house or list your house on our platform.
         </p>
-        <img src="/assets/images/home.svg" class="absolute w-full top-64 lg:top-24 inset-x-0 h-32" />
+        <img src="../../Assets/Images/home.svg" class="absolute w-full top-64 lg:top-24 inset-x-0 h-32" />
       </div>
       <div class="lg:col-span-3 grid grid-cols-3 gap-3 md:gap-10 lg:gap-5 dark:text-white mb-36 md:mb-44 lg:mb-0">
         <div
@@ -64,7 +64,7 @@ import { Link } from '@inertiajs/vue3'
           Let's Go!
           </Link>
         </div>
-        <img src="/assets/images/malaysia-map.svg" class="w-40" />
+        <img src="../../Assets/Images/malaysia-map.svg" class="w-40" />
       </div>
       <div class="grid grid-cols-2 mt-4 gap-4">
         <div class="bg-gray-400 dark:bg-gray-800 rounded-lg p-7">
@@ -85,7 +85,7 @@ import { Link } from '@inertiajs/vue3'
     </div>
     <div class="w-full relative">
       <h3 class="text-gray-800 text-3xl font-semibold mb-4 dark:text-white">Begin your home journey</h3>
-      <img src="/assets/images/home-couch.jpg"
+      <img src="../../Assets/Images/home-couch.jpg"
         class="h-3/4 md:h-3/5 lg:h-auto xl:h-[68.5%] w-full rounded-lg brightness-50 object-cover" />
       <div class="absolute top-20 md:top-32 lg:top-20 left-10">
         <h3 class="text-white text-3xl md:text-4xl font-semibold">Let us guide you to<br />your new home</h3>
@@ -96,7 +96,7 @@ import { Link } from '@inertiajs/vue3'
       </div>
       <div class="absolute top-72 md:top-96 lg:top-[26rem] xl:top-[22rem] left-10">
         <Link href="/listing" class="flex items-center">
-        <img src="/assets/images/house-logo.png" class="h-16 md:h-20 mr-3" alt="House Logo" />
+        <img src="../../Assets/Images/house-logo.png" class="h-16 md:h-20 mr-3" alt="House Logo" />
         <div>
           <h3 class="self-center text-2xl md:text-3xl font-bold whitespace-nowrap text-white">House</h3>
           <h3 class="text-white text-md md:text-xl font-medium">We'll see you home</h3>
@@ -111,7 +111,7 @@ import { Link } from '@inertiajs/vue3'
       <div
         class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
         <Link href="/listing">
-        <img class="rounded-t-lg" src="/assets/images/buy-home.png" alt="" />
+        <img class="rounded-t-lg" src="../../Assets/Images/buy-home.png" alt="" />
         </Link>
         <div class="p-5 px-8">
           <Link href="/listing">
@@ -138,7 +138,7 @@ import { Link } from '@inertiajs/vue3'
       <div
         class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
         <Link href="/listing">
-        <img class="rounded-t-lg" src="/assets/images/sell-home.png" alt="" />
+        <img class="rounded-t-lg" src="../../Assets/Images/sell-home.png" alt="" />
         </Link>
         <div class="p-5 px-8">
           <Link href="/listing">
@@ -164,7 +164,7 @@ import { Link } from '@inertiajs/vue3'
       <div
         class="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 py-10 hover:scale-105 transition ease-in-out duration-200">
         <Link href="/listing">
-        <img class="rounded-t-lg" src="/assets/images/rent-home.png" alt="" />
+        <img class="rounded-t-lg" src="../../Assets/Images/rent-home.png" alt="" />
         </Link>
         <div class="p-5 px-8">
           <Link href="/listing">
@@ -192,7 +192,7 @@ import { Link } from '@inertiajs/vue3'
   </section>
 
   <section class="max-w-6xl grid lg:grid-cols-2 gap-4 mx-4 xl:mx-auto mt-20">
-    <img src="/assets/images/for-sale.png" class="w-full object-cover" />
+    <img src="../../Assets/Images/for-sale.png" class="w-full object-cover" />
     <div class="flex flex-col self-center p-8 items-center lg:items-start">
       <h3 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
         See neighborhoods

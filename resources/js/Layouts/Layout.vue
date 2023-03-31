@@ -41,7 +41,7 @@ const notificationList = computed(() => usePage().props.user.notificationList)
         class="bg-white px-2 sm:px-4 py-2 md:py-1 w-full dark:bg-gray-800 drop-shadow-md border-b dark:border-gray-700">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="/" class="flex items-center">
-          <img src="/assets/images/house-logo.png" class="h-6 mr-3 sm:h-9" alt="House Logo" />
+          <img src="../Assets/Images/house-logo.png" class="h-6 mr-3 sm:h-9" alt="House Logo" />
           <span class="self-center text-xl font-bold whitespace-nowrap text-blue-700 dark:text-gray-400">House</span>
           </Link>
           <div class="flex md:order-2">

@@ -63,7 +63,7 @@ const update = () => {
           <div @click="clickHandler" class="relative group">
             <img v-if="!form.avatar"
               class="w-24 h-24 rounded-full shadow-lg object-cover group-hover:brightness-50 cursor-pointer"
-              :src="props.profile.avatar ? props.profile.src : '/assets/images/avatar.svg'" alt="user photo" />
+              :src="props.profile.avatar ? props.profile.src : '/storage/images/avatar.svg'" alt="user photo" />
             <img v-else class="w-24 h-24 rounded-full shadow-lg object-cover group-hover:brightness-50 cursor-pointer"
               :src="showAvatar" alt="user photo" />
             <div class="absolute top-9 left-5 hidden group-hover:flex justify-center items-center cursor-pointer">

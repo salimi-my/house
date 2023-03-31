@@ -23,7 +23,7 @@ const login = () => {
   <section class="w-full bg-gray-50 dark:bg-gray-900">
     <div class="flex flex-col items-center justify-center px-6 pt-32 py-36 mx-auto min-height-screen">
       <Link href="/" class="flex items-center mb-6 text-2xl font-bold text-blue-700 dark:text-white">
-      <img class="w-8 h-8 mr-2" src="/assets/images/house-logo.png" alt="House Logo">
+      <img class="w-8 h-8 mr-2" src="../../Assets/Images/house-logo.png" alt="House Logo">
       House
       </Link>
       <div
