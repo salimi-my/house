@@ -33,7 +33,8 @@ const user = computed(() => usePage().props.user)
   <div class="container max-w-6xl grid lg:grid-cols-5 mt-2 mb-20 px-4 xl:px-0 gap-4">
 
     <div class="w-full lg:col-span-3">
-      <div class="p-6 pb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div
+        class="p-6 pb-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 big-carousel">
         <h5 class="text-lg font-bold tracking-tight text-gray-500 dark:text-white mb-4">House Images</h5>
         <CarouselGallery :images="listing.images" />
       </div>

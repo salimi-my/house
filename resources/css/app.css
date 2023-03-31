@@ -49,7 +49,7 @@ select:not([size]) {
 
 .big-carousel .swiper-button-next,
 .big-carousel .swiper-button-prev {
-  top: var(--swiper-navigation-top-offset, 5%);
+  top: var(--swiper-navigation-top-offset, 4.5%);
 }
 
 .swiper-thumbs .swiper-button-next,
