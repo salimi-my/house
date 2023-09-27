@@ -4,9 +4,8 @@ This is an online property listing and marketplace app created using Laravel, Vu
 
 ## Online properties listing app
 
-- Available for all Malaysia's zone
-- Countdown to immediate next prayer time
-- Automatically play adhan
+- Users can search for properties listed
+- Make an offer to the owner/realtor
 
 ## Tech/framework used
 
